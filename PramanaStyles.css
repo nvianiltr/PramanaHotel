@@ -2,7 +2,7 @@ body {
 	width: 100%;
     background-color: #000000;
     color: #FFFFFF;
-    padding: 0;
+    margin: 0;
     font-family: Arial;
 }
 
@@ -19,13 +19,18 @@ footer {
 	margin-top: 2%;
 	text-align:center;
 }
-a:visited, link {
+
+
+a:visited, a:link {
 	color: white;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
-a:hover {
+a:hover, a:active{
 	background-color: white;
 	color: black;
+	/*font-size: 25px;*/
 }
 
 header img{
@@ -34,14 +39,15 @@ header img{
 	margin-right: auto;
 }
 
-.Menu {
+/*.Menu {
 	width: 100%;
-	padding-top: 2%;
-	padding-bottom: 2%;
-}
+}*/
+
 .Menu div{
 	width: 33%;
-	float: left;
+	display: inline-block;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	text-align: center;
 }
 
@@ -60,11 +66,6 @@ header img{
 	table-layout: fixed;
 	padding: 22px 22px;
 }
-/*
-.Form td, th {
-	padding: 5% 5%;
-}*/
-
 
 input[type="checkbox"] {
 	width: 12.8px;
@@ -74,4 +75,26 @@ input{
 }
 select{
 	width: 194px;
+}
+
+#content {
+	padding: 10px 10px;
+}
+
+.Facility div {
+	display: inline-block;
+}
+
+.Facility img {
+	width: 35%;
+	height: 320px;
+}
+
+#text {
+	width: 60%;
+	padding: 20px 20px;
+}
+
+#right {
+	text-align: right;
 }
