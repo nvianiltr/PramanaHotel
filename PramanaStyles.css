@@ -1,0 +1,77 @@
+body {
+	width: 100%;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 0;
+    font-family: Arial;
+}
+
+/*header{
+	width:100%;
+	padding: 0;
+}*/
+
+a{
+	text-decoration: none;
+}
+
+footer {
+	margin-top: 2%;
+	text-align:center;
+}
+a:visited, link {
+	color: white;
+}
+
+a:hover {
+	background-color: white;
+	color: black;
+}
+
+header img{
+	display: block;
+	margin-left:auto;
+	margin-right: auto;
+}
+
+.Menu {
+	width: 100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.Menu div{
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+
+.Form table{
+	table-layout: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid white;
+	border-collapse: collapse;
+	margin-top: 1%;
+
+}
+
+.Form th, tr, td {
+	border: 1px solid white;
+	table-layout: fixed;
+	padding: 22px 22px;
+}
+/*
+.Form td, th {
+	padding: 5% 5%;
+}*/
+
+
+input[type="checkbox"] {
+	width: 12.8px;
+}
+input{
+	width: 190px;
+}
+select{
+	width: 194px;
+}

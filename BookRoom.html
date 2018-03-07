@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="PramanaStyles.css">
+	
+</head>
+<body>
+	<header>
+		<img src="logo2.png" alt="The Pramana Hotel & Resort Logo">
+	</header>	
+	<nav class="Menu">
+		<div><a href="Home.html">HOME</a></div>
+		<div><a href="Facility.html">FACILITY</a></div>
+		<div><a href="BookRoom.html">BOOK A ROOM</a></div>
+	</nav>
+	<hr>
+	<nav class="Form">
+		<form method="post">
+			<table>
+				<th colspan="2">BOOK A ROOM</th>
+				<tr> 
+					<td>Name</td>
+					<td><input type="text" name="name" required/></td>
+				</tr>
+
+				<tr> 
+					<td>Email</td>
+					<td><input type="Email" required/></td>
+				</tr>
+
+				<tr> 
+					<td>Phone</td>
+					<td><input type="tel" name="phone" required/></td>
+				</tr>
+
+				<tr> 
+					<td>Stay In Date</td>
+					<td><input type="date" name="stayInDate" required/></td>
+				</tr>
+
+				<tr> <!-- must be numeric -->
+					<td>Length of Stay (days)</td>
+					<td><input type="text" name="lengthOfStay" required /></td>
+				</tr>
+
+				<tr> 
+					<td>Room Type</td>
+					<td>
+						<select name="roomType" required>
+							<option>Deluxe Room - $274</option>
+							<option>Deluxe Pool Villa - $438</option>
+							<option>1 Bedroom Pool Villa - $525</option>
+							<option>2 Bedroom Pool Villa - $635</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr> 
+					<td>Additional Charge</td>
+					<td>
+						<input type="checkbox" name="additionalCharge" value="80"> Extra Bed - $80 <br>
+						<input type="checkbox" name="additionalCharge" value="40"> Airport Shuttle - $40 <br>
+						<input type="checkbox" name="additionalCharge" value="100"> Ubud Tour 1D - $100 <br>
+					</td>
+				</tr>
+
+				<tr> 
+					<td colspan="2" align="center"> <input type="submit"></td>
+				</tr>
+			</table>
+		</form>
+	</nav>
+	<footer>© 2017 Pramana Experience - All Rights Reserved. </footer>
+</body>
+</html>
