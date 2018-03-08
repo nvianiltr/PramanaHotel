@@ -3,7 +3,37 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" href="PramanaStyles.css">
-	
+	<script type="text/javascript" src="C:\Users\nvian\Downloads\jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		 
+		window.onload = function(e) {
+			/* User can only choose today's date and onwards*/
+			var today = new Date().toISOString().split('T')[0];
+			$("[name='stayInDate']")[0].setAttribute('min', today);
+
+			function successfulBooking() {
+				console.log("hello");
+				var isi="<h1 style='text-align:center;'>BOOK ROOM<br><br>Your Booking Has Been Successfully Saved.<br></hr2>";
+				$('#content')[0].innerHTML = isi; 
+			}
+
+			function validateForm() {
+				var room = $('#roomType')[0];
+				console.log(room);
+				if($('#lengthOfStay')[0] <= 0){
+					alert("You must stay for at least 1 day");
+					return false;
+				}
+				else if(room.options[room.selectedIndex].value == '-1') {
+					alert("Please select a room type");
+					return false;
+				} else {
+					successfulBooking();
+				}
+			}
+		}
+
+	</script>
 </head>
 <body>
 	<header>
@@ -17,22 +47,22 @@
 	</nav>
 	<hr>
 	<nav class="Form" id = "content">
-		<form method="post">
+		<form method="post" onsubmit="return validateForm()">
 			<table>
 				<th colspan="2">BOOK A ROOM</th>
 				<tr> 
 					<td>Name</td>
-					<td><input type="text" name="name" required/></td>
+					<td><input type="text" id="name" required/></td>
 				</tr>
 
 				<tr> 
 					<td>Email</td>
-					<td><input type="Email" required/></td>
+					<td><input type="Email" id="email" required/></td>
 				</tr>
 
 				<tr> 
 					<td>Phone</td>
-					<td><input type="tel" name="phone" required/></td>
+					<td><input type="tel" id="phone" required/></td>
 				</tr>
 
 				<tr> 
@@ -40,15 +70,16 @@
 					<td><input type="date" name="stayInDate" required/></td>
 				</tr>
 
-				<tr> <!-- must be numeric -->
+				<tr> 
 					<td>Length of Stay (days)</td>
-					<td><input type="text" name="lengthOfStay" required /></td>
+					<td><input type="number" min=1 id="lengthOfStay" required/></td>
 				</tr>
 
 				<tr> 
 					<td>Room Type</td>
 					<td>
-						<select name="roomType" required>
+						<select id="roomType" required>
+							<option value='-1'>Select One</option>
 							<option>Deluxe Room - $274</option>
 							<option>Deluxe Pool Villa - $438</option>
 							<option>1 Bedroom Pool Villa - $525</option>
@@ -60,9 +91,9 @@
 				<tr> 
 					<td>Additional Charge</td>
 					<td>
-						<input type="checkbox" name="additionalCharge" value="80"> Extra Bed - $80 <br>
-						<input type="checkbox" name="additionalCharge" value="40"> Airport Shuttle - $40 <br>
-						<input type="checkbox" name="additionalCharge" value="100"> Ubud Tour 1D - $100 <br>
+						<input type="checkbox" id="additionalCharge" value="80"> Extra Bed - $80 <br>
+						<input type="checkbox" id="additionalCharge" value="40"> Airport Shuttle - $40 <br>
+						<input type="checkbox" id="additionalCharge" value="100"> Ubud Tour 1D - $100 <br>
 					</td>
 				</tr>
 
