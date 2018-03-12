@@ -10,28 +10,29 @@
 			/* User can only choose today's date and onwards*/
 			var today = new Date().toISOString().split('T')[0];
 			$("[name='stayInDate']")[0].setAttribute('min', today);
+		}
+		
+		function successfulBooking() {
+			console.log("hello");
+			var isi="<h1 style='text-align:center;'>BOOK ROOM<br><br>Your Booking Has Been Successfully Saved.<br></hr2>";
+			$('#content').innerHTML = isi; 
+		}
 
-			function successfulBooking() {
-				console.log("hello");
-				var isi="<h1 style='text-align:center;'>BOOK ROOM<br><br>Your Booking Has Been Successfully Saved.<br></hr2>";
-				$('#content')[0].innerHTML = isi; 
+		function validateForm() {
+			var room = $('#roomType')[0];
+			console.log(room);
+			if($('#lengthOfStay')[0] <= 0){
+				alert("You must stay for at least 1 day");
+				return false;
 			}
-
-			function validateForm() {
-				var room = $('#roomType')[0];
-				console.log(room);
-				if($('#lengthOfStay')[0] <= 0){
-					alert("You must stay for at least 1 day");
-					return false;
-				}
-				else if(room.options[room.selectedIndex].value == '-1') {
-					alert("Please select a room type");
-					return false;
-				} else {
-					successfulBooking();
-				}
+			else if(room.options[room.selectedIndex].value == '-1') {
+				alert("Please select a room type");
+				return false;
+			} else {
+				successfulBooking();
 			}
 		}
+	
 
 	</script>
 </head>
