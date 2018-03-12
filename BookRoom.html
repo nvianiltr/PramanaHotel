@@ -13,22 +13,17 @@
 		}
 		
 		function successfulBooking() {
-			console.log("hello");
 			var isi="<h1 style='text-align:center;'>BOOK ROOM<br><br>Your Booking Has Been Successfully Saved.<br></hr2>";
-			$('#content').innerHTML = isi; 
+			$('#content')[0].innerHTML = isi; 
 		}
 
 		function validateForm() {
-			var room = $('#roomType')[0];
-			console.log(room);
-			if($('#lengthOfStay')[0] <= 0){
-				alert("You must stay for at least 1 day");
-				return false;
-			}
-			else if(room.options[room.selectedIndex].value == '-1') {
+			var room = $("[name='roomType']")[0];
+			if(room.options[room.selectedIndex].value == '-1') {
 				alert("Please select a room type");
 				return false;
 			} else {
+
 				successfulBooking();
 			}
 		}
@@ -47,23 +42,23 @@
 		<a href="BookRoom.html"><div>BOOK A ROOM</div></a>
 	</nav>
 	<hr>
-	<nav class="Form" id = "content">
+	<nav class="Form" id="content">
 		<form method="post" onsubmit="return validateForm()">
 			<table>
 				<th colspan="2">BOOK A ROOM</th>
 				<tr> 
 					<td>Name</td>
-					<td><input type="text" id="name" required/></td>
+					<td><input type="text" name="name" required/></td>
 				</tr>
 
 				<tr> 
 					<td>Email</td>
-					<td><input type="Email" id="email" required/></td>
+					<td><input type="Email" name="email" required/></td>
 				</tr>
 
 				<tr> 
 					<td>Phone</td>
-					<td><input type="tel" id="phone" required/></td>
+					<td><input type="tel" name="phone" required/></td>
 				</tr>
 
 				<tr> 
@@ -73,18 +68,18 @@
 
 				<tr> 
 					<td>Length of Stay (days)</td>
-					<td><input type="number" min=1 id="lengthOfStay" required/></td>
+					<td><input type="number" min=1 name="lengthOfStay" required/></td>
 				</tr>
 
 				<tr> 
 					<td>Room Type</td>
 					<td>
-						<select id="roomType" required>
-							<option value='-1'>Select One</option>
-							<option>Deluxe Room - $274</option>
-							<option>Deluxe Pool Villa - $438</option>
-							<option>1 Bedroom Pool Villa - $525</option>
-							<option>2 Bedroom Pool Villa - $635</option>
+						<select name="roomType" required>
+							<option value="-1">Select One</option>
+							<option value="RT001">Deluxe Room - $274</option>
+							<option value="RT002">Deluxe Pool Villa - $438</option>
+							<option value="RT003">1 Bedroom Pool Villa - $525</option>
+							<option value="RT004">2 Bedroom Pool Villa - $635</option>
 						</select>
 					</td>
 				</tr>
@@ -92,9 +87,9 @@
 				<tr> 
 					<td>Additional Charge</td>
 					<td>
-						<input type="checkbox" id="additionalCharge" value="80"> Extra Bed - $80 <br>
-						<input type="checkbox" id="additionalCharge" value="40"> Airport Shuttle - $40 <br>
-						<input type="checkbox" id="additionalCharge" value="100"> Ubud Tour 1D - $100 <br>
+						<input type="checkbox" name="additionalService[]" value="AS001"> Extra Bed - $80 <br>
+						<input type="checkbox" name="additionalService[]" value="AS002"> Airport Shuttle - $40 <br>
+						<input type="checkbox" name="additionalService[]" value="AS003"> Ubud Tour 1D - $100 <br>
 					</td>
 				</tr>
 
