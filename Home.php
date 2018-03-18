@@ -6,13 +6,13 @@
 </head>
 <body>
 	<header>
-		<img src="logo2.png" alt="The Pramana Hotel & Resort Logo">
+		<img src="Images/logo2.png" alt="The Pramana Hotel & Resort Logo">
 	</header>	
 	<hr>
 	<nav class="Menu">
-		<a href="Home.html"><div>HOME</div></a>
-		<a href="Facility.html"><div>FACILITY</div></a>
-		<a href="BookRoom.html"><div>BOOK A ROOM</div></a>
+		<a href="Home.php"><div>HOME</div></a>
+		<a href="Facility.php"><div>FACILITY</div></a>
+		<a href="BookRoom.php"><div>BOOK A ROOM</div></a>
 	</nav>
 	<hr>
 	<nav class="Home" id= "content">

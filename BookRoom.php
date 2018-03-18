@@ -3,7 +3,7 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" href="PramanaStyles.css">
-	<script type="text/javascript" src="C:\Users\nvian\Downloads\jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 		 
 		window.onload = function(e) {
@@ -11,39 +11,30 @@
 			var today = new Date().toISOString().split('T')[0];
 			$("[name='stayInDate']")[0].setAttribute('min', today);
 		}
-		
-		function successfulBooking() {
-			var isi="<h1 style='text-align:center;'>BOOK ROOM<br><br>Your Booking Has Been Successfully Saved.<br></hr2>";
-			$('#content')[0].innerHTML = isi; 
-		}
 
 		function validateForm() {
 			var room = $("[name='roomType']")[0];
 			if(room.options[room.selectedIndex].value == '-1') {
 				alert("Please select a room type");
 				return false;
-			} else {
-
-				successfulBooking();
 			}
 		}
 	
-
 	</script>
 </head>
 <body>
 	<header>
-		<img src="logo2.png" alt="The Pramana Hotel & Resort Logo">
+		<img src="Images/logo2.png" alt="The Pramana Hotel & Resort Logo">
 	</header>	
 	<hr>
 	<nav class="Menu">
-		<a href="Home.html"><div>HOME</div></a>
-		<a href="Facility.html"><div>FACILITY</div></a>
-		<a href="BookRoom.html"><div>BOOK A ROOM</div></a>
+		<a href="Home.php"><div>HOME</div></a>
+		<a href="Facility.php"><div>FACILITY</div></a>
+		<a href="BookRoom.php"><div>BOOK A ROOM</div></a>
 	</nav>
 	<hr>
 	<nav class="Form" id="content">
-		<form method="post" onsubmit="return validateForm()">
+		<form method="post" action="connection.php" onsubmit="return validateForm()">
 			<table>
 				<th colspan="2">BOOK A ROOM</th>
 				<tr> 
@@ -76,10 +67,10 @@
 					<td>
 						<select name="roomType" required>
 							<option value="-1">Select One</option>
-							<option value="RT001">Deluxe Room - $274</option>
-							<option value="RT002">Deluxe Pool Villa - $438</option>
-							<option value="RT003">1 Bedroom Pool Villa - $525</option>
-							<option value="RT004">2 Bedroom Pool Villa - $635</option>
+							<option value="1">Deluxe Room - $274</option>
+							<option value="2">Deluxe Pool Villa - $438</option>
+							<option value="3">1 Bedroom Pool Villa - $525</option>
+							<option value="4">2 Bedroom Pool Villa - $635</option>
 						</select>
 					</td>
 				</tr>
@@ -87,9 +78,9 @@
 				<tr> 
 					<td>Additional Charge</td>
 					<td>
-						<input type="checkbox" name="additionalService[]" value="AS001"> Extra Bed - $80 <br>
-						<input type="checkbox" name="additionalService[]" value="AS002"> Airport Shuttle - $40 <br>
-						<input type="checkbox" name="additionalService[]" value="AS003"> Ubud Tour 1D - $100 <br>
+						<input type="checkbox" name="additionalService[]" value="1"> Extra Bed - $80 <br>
+						<input type="checkbox" name="additionalService[]" value="2"> Airport Shuttle - $40 <br>
+						<input type="checkbox" name="additionalService[]" value="3"> Ubud Tour 1D - $100 <br>
 					</td>
 				</tr>
 

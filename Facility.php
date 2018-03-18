@@ -6,13 +6,13 @@
 </head>
 <body>
 	<header>
-		<img src="logo2.png" alt="The Pramana Hotel & Resort Logo">
+		<img src="Images/logo2.png" alt="The Pramana Hotel & Resort Logo">
 	</header>	
 	<hr>
 	<nav class="Menu">
-		<a href="Home.html"><div>HOME</div></a>
-		<a href="Facility.html"><div>FACILITY</div></a>
-		<a href="BookRoom.html"><div>BOOK A ROOM</div></a>
+		<a href="Home.php"><div>HOME</div></a>
+		<a href="Facility.php"><div>FACILITY</div></a>
+		<a href="BookRoom.php"><div>BOOK A ROOM</div></a>
 	</nav>
 	<hr>
 	<nav class="Facility" id = "content">
@@ -23,11 +23,11 @@
 
 				Throughout the ancient art of classical yoga, you will learn technique to still your mind, strengthen your body and expand your consciousness using posture, breath work, meditation and relaxation. All guests may join the Balinese activities such us : Balinese Dance Lesson, the coconut leave craft and offering making together with our staff on afternoon time after lunch.
 			</div>
-			<img src="yogacenter.jpg" id="photo">
+			<img src="Images/yogacenter.jpg" id="photo">
 		</div>
 
 		<div>
-			<img src="kumbuhrestaurant.jpg" id="photo">
+			<img src="Images/kumbuhrestaurant.jpg" id="photo">
 			<div id="text">
 				<h1>The Kumbuh Restaurant</h1>
 
@@ -45,11 +45,11 @@
 
 				This stunning infinity pool lined with BatuChandi stone, appears to float in its setting. It’s a unique swimmer feeling for swimming around the area.
 			</div>
-			<img src="swimmingpool.jpg">
+			<img src="Images/swimmingpool.jpg">
 		</div>
 
 		<div>
-			<img src="radhaspa.jpg">
+			<img src="Images/radhaspa.jpg">
 			<div id="text">
 				<h1>Radha Spa</h1>
 
@@ -65,11 +65,11 @@
 
 				A tastefully appointed business center incorporate with the lobby area. The Business Centre is provide a social setting for guests to take pleasure for reading, meeting and using our computer with the internet access. There are some books collection by Pramana which can borrow along the stay by contacting our reception.
 			</div>
-			<img src="businesscenter.jpg">
+			<img src="Images/businesscenter.jpg">
 		</div>
 
 		<div>
-			<img src="lounge.jpg">
+			<img src="Images/lounge.jpg">
 			<div id="text">
 				<h1>Lounge</h1>
 
